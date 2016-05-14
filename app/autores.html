@@ -1,0 +1,14 @@
+<h1>Opa! {{vm.titulo}}, parceiro!</h1>
+<navbar></navbar>
+<h3>Tu conhece esses bixo?</h3>
+<input type="text" ng-model="vm.filtro" placeholder="Todos">
+<ul>
+  <li ng-repeat="autor in vm.autores | filter: vm.filtro" ng-show="autor.visivel">
+    <a href="//pt.wikipedia.org/wiki/{{autor.nome}}" target="_blank">{{autor.nome}}</a>
+  </li>
+</ul>
+<form ng-submit="vm.adicionarAutor(vm.novoAutor)">
+  <label>Me diga um novo, macho</label>
+  <input type="text" ng-model="vm.novoAutor" placeholder="Autor que conheço">
+  <button type="submit" ng-disabled="!vm.novoAutor">Põe ai</button>
+</form>

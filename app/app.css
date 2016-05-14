@@ -1,0 +1,83 @@
+html, body {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-weight: lighter;
+}
+body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+h1 {
+  padding: .5em;
+  background-color: #000;
+  color: #fff;
+}
+pre {
+  padding: .75em;
+  background-color: #ddd;
+}
+button {
+  padding: .5em 1em;
+  font-family: monospace;
+}
+input, form > label {
+  display: block;
+  width: 70%;
+  height: 2em;
+}
+form > input {
+  display: inline;
+}
+
+/* menu */
+ul.menu {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+ul.menu li {
+  display: inline;
+  padding: 0.5em 1.5em;
+  border: 1px #ccc solid;
+}
+
+ul.menu li:hover {
+  background-color: #eee;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* footer */
+footer {
+  margin-top: 2em;
+  text-align: center;
+  line-height: 2em;
+}
+
+span.core {
+  color: #f44336;
+  vertical-align: middle;
+}
+
+span.grande {
+  font-size: 2em;
+  animation-name: ficaGrandeFicaPequeno;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ficaGrandeFicaPequeno {
+    0% {
+      font-size: 2em;
+    }
+    50% {
+      font-size: 1.75em;
+    }
+    100% {
+      font-size: 2em;
+    }
+}
